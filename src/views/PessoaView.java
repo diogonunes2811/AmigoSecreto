@@ -20,9 +20,9 @@ public class PessoaView {
         System.out.println("| 2 - Listar Pessoas                 |");
         System.out.println("| 3 - Editar Participante por Codigo |");
         System.out.println("| 4 - Buscar Participante por Codigo |");
-        System.out.println("| 5 - Excluir Participantes          |");
-        System.out.println("| 6 - Gerar Amigos Secretos          |");
-        System.out.println("| 7 - Buscar Amigo Secreto           |");
+        System.out.println("| 5 - Gerar Amigos Secretos          |");
+        System.out.println("| 6 - Buscar Amigo Secreto           |");
+        System.out.println("| 0 - Para Sair                      |");  
         System.out.println("|------------------------------------|");
         System.out.println("");
         System.out.print("Digite: ");
@@ -44,25 +44,22 @@ public class PessoaView {
             case 4:
                 buscarParticipantes();
                 break;
-            case 5:
+            /*case 5:
                 excluirParticipantes();
-                break;
-            case 6:
+                break;*/
+            case 5:
                 gerarAmigosSecreto();
                 break;
-            case 7:
+            case 6:
                 buscarSeuAmigoSecreto();
                 break;
+            case 0:
+                System.exit(0);
             default:
                  System.out.println("opção Invalida");
                break;       
         }
-          
-        }catch(InputMismatchException ie){
-            System.out.println("***Erro: Esperava um número inteiro. (" + ie.toString()+")");
-            leitor.nextLine();
-        }
-        catch (Exception e){
+        }catch (Exception e){
             System.out.println("Erro: Esperava um número Inteiro. (" + e.toString() + ")");
             leitor.nextLine();
         }
@@ -116,7 +113,7 @@ public class PessoaView {
     }
 
     private void gerarAmigosSecreto() {  
-       PessoasController.embaralhar();
+        PessoasController.embaralhar();
         System.out.println("");
         System.out.println("Gerando Amigo Secreto .:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:");
         System.out.println("Amigos Secreto Gerados...");

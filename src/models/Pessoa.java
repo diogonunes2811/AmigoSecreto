@@ -8,7 +8,6 @@ public class Pessoa {
     private int codigo;
     private String nome;
     private String presente;
-    private Pessoa quemmepegou;
     private Pessoa quemeupeguei;
     
     public int getId() {
@@ -41,14 +40,6 @@ public class Pessoa {
 
     public void setPresente(String presente) {
         this.presente = presente;
-    }
-
-    public Pessoa getQuemmepegou() {
-        return quemmepegou;
-    }
-
-    public void setQuemmepegou(Pessoa quemmepegou) {
-        this.quemmepegou = quemmepegou;
     }
 
     public Pessoa getQuemeupeguei() {
